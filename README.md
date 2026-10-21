@@ -79,10 +79,3 @@ Treat these as **preliminary**. Several cells are incomplete or uneven, so check
 | Fabrication | 97-100% fabricated in every config, 0% false refusals | no variation to analyse: either the models never decline or the decline detector misses their phrasing (inspect raw outputs before reporting) |
 | JSON | prompt-only validity falls with temperature (qwen 1.00 -> 0.90 -> 0.55; smollm2 1.00 -> 0.65 -> 0.45 strict); `format=schema` stays at 1.00 | only T0.0, T0.7, T1.0 were run; qwen failures are all markdown fences, smollm2 also has prose, unparseable output and wrong types |
 
-## Still to do / verify
-1. **Finish the runs** so every config has the same questions, or restrict comparisons to the common set.
-2. **Inspect fabrication outputs** by hand (a quick `head` of `results/fake.jsonl`) and confirm the 45 fake entities really do not exist (`data_builders.verification_checklist()`).
-3. **Validate the heuristic TruthfulQA scorer**: `analysis.py export-labels --n 100`, label by hand, then `analysis.py kappa --file ...`; optionally add `judge.py`.
-4. **Investigate the `greedy_repeat` failure** and the fixed-vs-varied gap at T=0 (fixed 0.91-0.92 vs varied 1.00). Both should be identical for greedy decoding, so the cause is repeated identical requests (possible prompt-cache effects) or token-cap interactions. Report it as an observation, not a proven cause.
-5. Run the remaining JSON configs (T1.3, T1.3_p0.9, ollama_default) and at least one 3B model for the size comparison.
-6. `--logprobs` is best-effort and not analysed yet; the sampler order of your engine should be stated in the report.
