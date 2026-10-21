@@ -1,0 +1,8 @@
+model,mode,config,schema_error,count
+smollm2:1.7b,prompt,T0.7,bad_enum,1
+smollm2:1.7b,prompt,T0.7,extra_keys,3
+smollm2:1.7b,prompt,T0.7,missing_keys,3
+smollm2:1.7b,prompt,T0.7,wrong_type,5
+smollm2:1.7b,prompt,T1.0,extra_keys,1
+smollm2:1.7b,prompt,T1.0,missing_keys,2
+smollm2:1.7b,prompt,T1.0,wrong_type,1

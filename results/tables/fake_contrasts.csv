@@ -1,0 +1,9 @@
+model,template,config,baseline,metric,diff,ci_lo,ci_hi,p,n_pairs,p_holm
+qwen2.5:1.5b,plain,T0.7,T0.0,fabricated,-0.029629629629629634,-0.05925925925925927,-0.0074074074074074086,0.046,45,0.368
+qwen2.5:1.5b,plain,T1.0,T0.0,fabricated,0.0,0.0,0.0,1.0,3,1.0
+qwen2.5:1.5b,plain,T1.6,T0.0,fabricated,-0.022222222222222223,-0.05185185185185186,0.0,0.097,45,0.679
+qwen2.5:1.5b,plain,T1.0_k1,T1.0,fabricated,0.0,0.0,0.0,1.0,3,1.0
+smollm2:1.7b,plain,T0.7,T0.0,fabricated,-0.0074074074074074086,-0.022222222222222223,0.0,0.755,45,1.0
+smollm2:1.7b,plain,T1.0,T0.0,fabricated,0.0,0.0,0.0,1.0,3,1.0
+smollm2:1.7b,plain,T1.6,T0.0,fabricated,0.0,0.0,0.0,1.0,45,1.0
+smollm2:1.7b,plain,T1.0_k1,T1.0,fabricated,0.0,0.0,0.0,1.0,3,1.0

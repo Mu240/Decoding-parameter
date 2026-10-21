@@ -1,0 +1,10 @@
+ollama>=0.5
+httpx
+datasets
+pandas
+numpy
+scipy
+statsmodels
+jsonschema
+matplotlib
+pytest

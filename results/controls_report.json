@@ -1,0 +1,82 @@
+[
+  {
+    "model": "qwen2.5:1.5b",
+    "control": "greedy_repeat",
+    "prompts": 5,
+    "passed": 2,
+    "rate": 0.4,
+    "expectation": "PASS expected; FAIL => engine is not bit-deterministic at T=0 (report it!)"
+  },
+  {
+    "model": "qwen2.5:1.5b",
+    "control": "k1_vs_t0",
+    "prompts": 5,
+    "passed": 5,
+    "rate": 1.0,
+    "expectation": "PASS expected; FAIL => top_k=1 is not equivalent to T=0 in this build"
+  },
+  {
+    "model": "qwen2.5:1.5b",
+    "control": "same_seed_repeat",
+    "prompts": 5,
+    "passed": 5,
+    "rate": 1.0,
+    "expectation": "PASS expected; FAIL => a fixed seed does not make sampling reproducible"
+  },
+  {
+    "model": "qwen2.5:1.5b",
+    "control": "topk0_vs_neutral",
+    "prompts": 5,
+    "passed": 0,
+    "rate": 0.0,
+    "expectation": "PASS => top_k=0 behaves as 'off' (same as 1000); FAIL => 0 means something else"
+  },
+  {
+    "model": "qwen2.5:1.5b",
+    "control": "varies_t16",
+    "prompts": 5,
+    "passed": 5,
+    "rate": 1.0,
+    "expectation": "PASS expected; FAIL on all prompts => options are not reaching the sampler"
+  },
+  {
+    "model": "smollm2:1.7b",
+    "control": "greedy_repeat",
+    "prompts": 5,
+    "passed": 1,
+    "rate": 0.2,
+    "expectation": "PASS expected; FAIL => engine is not bit-deterministic at T=0 (report it!)"
+  },
+  {
+    "model": "smollm2:1.7b",
+    "control": "k1_vs_t0",
+    "prompts": 5,
+    "passed": 5,
+    "rate": 1.0,
+    "expectation": "PASS expected; FAIL => top_k=1 is not equivalent to T=0 in this build"
+  },
+  {
+    "model": "smollm2:1.7b",
+    "control": "same_seed_repeat",
+    "prompts": 5,
+    "passed": 5,
+    "rate": 1.0,
+    "expectation": "PASS expected; FAIL => a fixed seed does not make sampling reproducible"
+  },
+  {
+    "model": "smollm2:1.7b",
+    "control": "topk0_vs_neutral",
+    "prompts": 5,
+    "passed": 0,
+    "rate": 0.0,
+    "expectation": "PASS => top_k=0 behaves as 'off' (same as 1000); FAIL => 0 means something else"
+  },
+  {
+    "model": "smollm2:1.7b",
+    "control": "varies_t16",
+    "prompts": 5,
+    "passed": 5,
+    "rate": 1.0,
+    "expectation": "PASS expected; FAIL on all prompts => options are not reaching the sampler"
+  }
+]

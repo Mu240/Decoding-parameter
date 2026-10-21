@@ -1,0 +1,11 @@
+model,template,config,refused,refused_lo,refused_hi,n_clusters
+qwen2.5:1.5b,plain,T0.0,0.0,0.0,0.0,10
+qwen2.5:1.5b,plain,T0.7,0.0,0.0,0.0,10
+qwen2.5:1.5b,plain,T1.0,0.0,0.0,0.0,2
+qwen2.5:1.5b,plain,T1.0_k1,0.0,0.0,0.0,2
+qwen2.5:1.5b,plain,T1.6,0.0,0.0,0.0,10
+smollm2:1.7b,plain,T0.0,0.0,0.0,0.0,10
+smollm2:1.7b,plain,T0.7,0.0,0.0,0.0,10
+smollm2:1.7b,plain,T1.0,0.0,0.0,0.0,2
+smollm2:1.7b,plain,T1.0_k1,0.0,0.0,0.0,2
+smollm2:1.7b,plain,T1.6,0.0,0.0,0.0,10

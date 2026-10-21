@@ -1,0 +1,8 @@
+{
+  "dataset": "truthfulqa/truthful_qa",
+  "revision": "unpinned (latest)",
+  "n_total_joined": 816,
+  "n_sample": 200,
+  "seed": 0,
+  "datasets_version": "5.1.0"
+}
